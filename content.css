@@ -1,0 +1,173 @@
+/* ── Toolbar container ── */
+
+#sce-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #1b1b1b;
+  border-bottom: 2px solid #49cc90;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+}
+
+/* ── Row layout ── */
+
+.sce-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ── Button groups ── */
+
+.sce-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sce-label {
+  color: #a0a0a0;
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+.sce-btn {
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+
+.sce-btn:hover {
+  opacity: 0.85;
+}
+
+.sce-btn--collapse {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.sce-btn--expand {
+  background: #49cc90;
+  color: #1b1b1b;
+}
+
+/* ── Search bar ── */
+
+.sce-search-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 0 10px;
+  transition: border-color 0.15s ease;
+}
+
+.sce-search-wrapper:focus-within {
+  border-color: #49cc90;
+}
+
+.sce-search-icon {
+  color: #666;
+  font-size: 16px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.sce-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e0e0e0;
+  font-size: 13px;
+  font-family: inherit;
+  padding: 7px 0;
+  min-width: 0;
+}
+
+.sce-search-input::placeholder {
+  color: #555;
+}
+
+.sce-search-count {
+  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sce-search-count--no-results {
+  color: #e74c3c;
+}
+
+.sce-shortcut-hint {
+  color: #444;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 2px 5px;
+  letter-spacing: 0.3px;
+}
+
+.sce-search-clear {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.sce-search-clear:hover {
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+}
+
+/* ── Dimming: non-matching operations ── */
+
+.sce-dimmed {
+  opacity: 0.25;
+  transition: opacity 0.2s ease;
+}
+
+.sce-dimmed:hover {
+  opacity: 0.6;
+}
+
+/* ── Dimming: entire tag section when no children match ── */
+
+.sce-dimmed-tag {
+  opacity: 0.2;
+  transition: opacity 0.2s ease;
+}
+
+.sce-dimmed-tag:hover {
+  opacity: 0.5;
+}
+
+/* ── Highlight: matching operations during active search ── */
+
+.sce-match {
+  box-shadow: inset 3px 0 0 #49cc90;
+}
